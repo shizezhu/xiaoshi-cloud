@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.xiaoshi.cloud</groupId>
+    <artifactId>xiaoshi-cloud</artifactId>
+    <version>${revision}</version>
+    <packaging>pom</packaging>
+    <name>${project.artifactId}</name>
+    <description>XiaoShi Cloud</description>
+
+    <modules>
+        <module>xiaoshi-admin-api</module>
+        <module>xiaoshi-admin-server</module>
+        <module>xiaoshi-client-api</module>
+        <module>xiaoshi-client-server</module>
+        <module>xiaoshi-framework</module>
+    </modules>
+
+    <properties>
+        <revision>1.0</revision>
+        <java.version>21</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven-compiler.source>${java.version}</maven-compiler.source>
+        <maven-compiler.target>${java.version}</maven-compiler.target>
+        <maven-compiler.encoding>${project.build.sourceEncoding}</maven-compiler.encoding>
+    </properties>
+
+</project>
