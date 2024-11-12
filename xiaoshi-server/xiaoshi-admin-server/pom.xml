@@ -5,10 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.xiaoshi.cloud</groupId>
-        <artifactId>xiaoshi-cloud</artifactId>
+        <artifactId>xiaoshi-server</artifactId>
         <version>${revision}</version>
     </parent>
-
     <artifactId>xiaoshi-admin-server</artifactId>
     <packaging>pom</packaging>
     <description>

@@ -5,17 +5,14 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.xiaoshi.cloud</groupId>
-        <artifactId>xiaoshi-cloud</artifactId>
+        <artifactId>xiaoshi-server</artifactId>
         <version>${revision}</version>
     </parent>
-    <artifactId>xiaoshi-framework</artifactId>
+    <artifactId>xiaoshi-client-api</artifactId>
     <packaging>pom</packaging>
     <description>
-        支撑整个微服务架构的框架包
+        客户端接口服务的RPC接口，提供给其它模块调用。
     </description>
 
-    <modules>
-        <module>xiaoshi-common</module>
-    </modules>
 
 </project>

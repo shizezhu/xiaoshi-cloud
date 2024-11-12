@@ -5,16 +5,14 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.xiaoshi.cloud</groupId>
-        <artifactId>xiaoshi-cloud</artifactId>
+        <artifactId>xiaoshi-server</artifactId>
         <version>${revision}</version>
     </parent>
-
     <artifactId>xiaoshi-admin-api</artifactId>
+    <packaging>pom</packaging>
+    <description>
+        管理后台RPC接口，提供给其它模块调用
+    </description>
 
-    <properties>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
 
 </project>

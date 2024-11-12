@@ -8,14 +8,20 @@
         <artifactId>xiaoshi-cloud</artifactId>
         <version>${revision}</version>
     </parent>
-    <artifactId>xiaoshi-framework</artifactId>
+    <artifactId>xiaoshi-server</artifactId>
     <packaging>pom</packaging>
     <description>
-        支撑整个微服务架构的框架包
+        接口服务包，包含公共服务接口、管理后台接口、客户端接口
     </description>
 
     <modules>
-        <module>xiaoshi-common</module>
+        <!-- 管理后台接口模块 -->
+        <module>xiaoshi-admin-api</module>
+        <module>xiaoshi-admin-server</module>
+
+        <!-- 客户端接口模块 -->
+        <module>xiaoshi-client-api</module>
+        <module>xiaoshi-client-server</module>
     </modules>
 
 </project>
