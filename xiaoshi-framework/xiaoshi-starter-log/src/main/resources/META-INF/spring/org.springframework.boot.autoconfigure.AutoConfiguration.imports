@@ -1,0 +1,2 @@
+com.xiaoshi.framework.log.config.HttpInfoAutoConfiguration
+com.xiaoshi.framework.log.core.LogRunner

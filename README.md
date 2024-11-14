@@ -6,6 +6,9 @@
 
 * xiaoshi-dependencies: 统一依赖版本管理
 * xiaoshi-framework: 系统框架工具包
+  * xiaoshi-common: 公用工具包
+  * xiaoshi-starter-boot: Spring Boot 集成工具包
+  * xiaoshi-starter-log: 日志工具包
 * xiaoshi-server: 接口服务包
   * 公共服务放在最外层，端口号以10xx开头
   * xiaoshi-admin-api: 管理后台RPC接口，暴露给其它模块调用

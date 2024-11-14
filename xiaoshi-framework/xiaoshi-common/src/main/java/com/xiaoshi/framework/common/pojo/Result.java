@@ -22,7 +22,7 @@ import java.io.Serializable;
 @Getter
 @ToString
 @Schema(description = "通用响应")
-public class CommonResult<T> implements Serializable {
+public class Result<T> implements Serializable {
 
     @Serial
     private static final long serialVersionUID = 1L;
@@ -49,34 +49,34 @@ public class CommonResult<T> implements Serializable {
     @Schema(description = "响应数据", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
     private final T data;
 
-    public CommonResult() {
+    public Result() {
         this(GlobalErrorCodeConstants.SUCCESS.build(), null);
     }
 
-    public CommonResult(ErrorCode errorCode) {
+    public Result(ErrorCode errorCode) {
         this(errorCode, null);
     }
 
-    public CommonResult(ErrorCode errorCode, T data) {
+    public Result(ErrorCode errorCode, T data) {
         this.code = errorCode.getCode();
         this.msg = errorCode.getMsg();
         this.data = data;
     }
 
-    public static <T> CommonResult<T> success() {
+    public static <T> Result<T> success() {
         return of(GlobalErrorCodeConstants.SUCCESS.build());
     }
 
-    public static <T> CommonResult<T> success(T data) {
+    public static <T> Result<T> success(T data) {
         return of(GlobalErrorCodeConstants.SUCCESS.build(), data);
     }
 
-    public static <T> CommonResult<T> of(ErrorCode errorCode) {
-        return new CommonResult<>(errorCode);
+    public static <T> Result<T> of(ErrorCode errorCode) {
+        return new Result<>(errorCode);
     }
 
-    public static <T> CommonResult<T> of(ErrorCode errorCode, T data) {
-        return new CommonResult<>(errorCode, data);
+    public static <T> Result<T> of(ErrorCode errorCode, T data) {
+        return new Result<>(errorCode, data);
     }
 
     @Schema(description = "是否成功：true/false", requiredMode = Schema.RequiredMode.REQUIRED, example = "true")

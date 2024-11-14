@@ -16,6 +16,8 @@
 
     <modules>
         <module>xiaoshi-common</module>
+        <module>xiaoshi-starter-boot</module>
+        <module>xiaoshi-starter-log</module>
     </modules>
 
 </project>
