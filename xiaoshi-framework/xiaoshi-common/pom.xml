@@ -65,6 +65,7 @@
             <groupId>org.dromara.hutool</groupId>
             <artifactId>hutool-all</artifactId>
         </dependency>
+
     </dependencies>
 
 </project>

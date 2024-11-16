@@ -16,7 +16,9 @@ import org.springframework.web.servlet.DispatcherServlet;
  * @since 2024/11/14 下午6:37
  */
 @AutoConfiguration
+// 引入了 DispatcherServlet 的情况下才生效
 @ConditionalOnClass(DispatcherServlet.class)
+// 配置了 xiaoshi.log.http-info.enable=true 或者无配置的情况下才生效
 @ConditionalOnProperty(prefix = "xiaoshi.log.http-info.enable", value = "true", matchIfMissing = true)
 public class HttpInfoAutoConfiguration {
 
@@ -27,7 +29,7 @@ public class HttpInfoAutoConfiguration {
     public FilterRegistrationBean<HttpInfoFilter> httpInfoFilter() {
         FilterRegistrationBean<HttpInfoFilter> registrationBean = new FilterRegistrationBean<>();
         registrationBean.setFilter(new HttpInfoFilter());
-        registrationBean.setOrder(FilterOrderConstants.HTTP_INFO_LOG_FILTER);
+        registrationBean.setOrder(FilterOrderConstants.LOG_HTTP_INFO_FILTER);
         return registrationBean;
     }
 

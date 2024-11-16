@@ -79,7 +79,7 @@ public interface GlobalErrorCodeConstants extends GlobalCodeConstants {
     /**
      * 请求方法不正确
      */
-    ErrorCodeBuilder REQUEST_METHOD_INCORRECT = new ErrorCodeBuilder(CODE_REQUEST_METHOD_INCORRECT, "不支持请求方法 {0}，支持的方法有 {1}");
+    ErrorCodeMsgArg2Builder REQUEST_METHOD_INCORRECT = new ErrorCodeMsgArg2Builder(CODE_REQUEST_METHOD_INCORRECT, "不支持请求方法 {0}，支持的方法有 {1}");
     /**
      * 此操作需要确认
      */

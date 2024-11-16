@@ -8,8 +8,19 @@ package com.xiaoshi.framework.common.enums;
  */
 public interface FilterOrderConstants {
 
+    /**
+     * 跨域拦截器
+     */
     int WEB_CORS_FILTER = 0;
 
-    int HTTP_INFO_LOG_FILTER = WEB_CORS_FILTER + 1;
+    /**
+     * Http明细日志拦截器
+     */
+    int LOG_HTTP_INFO_FILTER = WEB_CORS_FILTER + 1;
+
+    /**
+     * 请求Body缓存拦截器
+     */
+    int REQUEST_BODY_CACHE_FILTER = LOG_HTTP_INFO_FILTER + 1;
 
 }

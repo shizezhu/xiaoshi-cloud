@@ -1,0 +1,2 @@
+com.xiaoshi.framework.web.config.WebAutoConfiguration
+com.xiaoshi.framework.jackson.config.JacksonAutoConfiguration

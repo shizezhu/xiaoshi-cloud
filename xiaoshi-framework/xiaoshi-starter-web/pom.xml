@@ -8,41 +8,46 @@
         <artifactId>xiaoshi-framework</artifactId>
         <version>${revision}</version>
     </parent>
-
-    <artifactId>xiaoshi-starter-log</artifactId>
+    <artifactId>xiaoshi-starter-web</artifactId>
     <packaging>jar</packaging>
     <description>
-        日志组件
+        web组件
     </description>
 
     <dependencies>
-
         <!-- 公共组件 -->
         <dependency>
             <groupId>com.xiaoshi.cloud</groupId>
             <artifactId>xiaoshi-common</artifactId>
             <optional>true</optional>
         </dependency>
-
-        <!-- SrpingBoot 集成 -->
+        <!-- SpringBoot 组件 -->
         <dependency>
             <groupId>com.xiaoshi.cloud</groupId>
             <artifactId>xiaoshi-starter-boot</artifactId>
         </dependency>
-
-        <!-- Srping Web -->
+        <!-- Log 组件 -->
+        <dependency>
+            <groupId>com.xiaoshi.cloud</groupId>
+            <artifactId>xiaoshi-starter-log</artifactId>
+        </dependency>
+        <!-- Spring Web 依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <optional>true</optional>
+            <exclusions>
+                <!-- 移除 Tomcat 作为 Web 服务器 -->
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
-
-        <!-- 统一日志记录接口规范 -->
+        <!-- 引入 Undertow 作为 Web 服务器 -->
         <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-undertow</artifactId>
         </dependency>
-
     </dependencies>
 
 </project>

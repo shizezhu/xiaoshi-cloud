@@ -2,7 +2,13 @@ package com.xiaoshi.framework.log.core.utils;
 
 import org.slf4j.MDC;
 
-public class TracerFrameworkUtils {
+/**
+ * 日志组件工具
+ *
+ * @author xiaoshi
+ * @since 2024/11/14 下午10:07
+ */
+public class LogFrameworkUtils {
 
     public static final String TRACE_ID = "trace-id";
 

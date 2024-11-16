@@ -15,6 +15,11 @@
     </description>
 
     <dependencies>
+        <!-- 公共组件 -->
+        <dependency>
+            <groupId>com.xiaoshi.cloud</groupId>
+            <artifactId>xiaoshi-common</artifactId>
+        </dependency>
         <!-- spring boot 依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -24,6 +29,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
+        </dependency>
+        <!-- Spring 参数校验 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
     </dependencies>
 
