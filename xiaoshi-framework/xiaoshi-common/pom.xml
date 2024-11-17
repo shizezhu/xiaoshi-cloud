@@ -34,7 +34,7 @@
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-starter-webmvc-api</artifactId>
-            <scope>provided</scope>
+            <scope>provided</scope> <!-- 只用到注解 -->
         </dependency>
         <!-- 丰富的集合、字符串、日期处理、数字处理、反射等工具 -->
         <dependency>

@@ -1,6 +1,6 @@
 package com.xiaoshi.framework.web.core.pojo;
 
-import com.xiaoshi.framework.web.config.XiaoshiWebProperties;
+import com.xiaoshi.framework.web.config.WebProperties;
 import lombok.AllArgsConstructor;
 
 /**
@@ -14,23 +14,23 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class WebPathPrefix {
 
-    private final XiaoshiWebProperties xiaoshiWebProperties;
+    private final WebProperties webProperties;
 
     private final String applicationName;
 
     public String getClientApi() {
-        return xiaoshiWebProperties.getClientApi().getPrefix();
+        return webProperties.getClientApi().getPrefix();
     }
 
     public String getAdminApi() {
-        return xiaoshiWebProperties.getAdminApi().getPrefix();
+        return webProperties.getAdminApi().getPrefix();
     }
 
     public String getClientApplicationApi() {
-        return xiaoshiWebProperties.getClientApi().getPrefix() + "/" + applicationName;
+        return webProperties.getClientApi().getPrefix() + "/" + applicationName;
     }
 
     public String getAdminApplicationApi() {
-        return xiaoshiWebProperties.getAdminApi().getPrefix() + "/" + applicationName;
+        return webProperties.getAdminApi().getPrefix() + "/" + applicationName;
     }
 }

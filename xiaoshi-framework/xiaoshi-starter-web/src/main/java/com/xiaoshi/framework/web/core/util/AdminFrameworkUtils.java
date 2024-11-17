@@ -4,6 +4,7 @@ import com.xiaoshi.framework.common.utils.validation.CheckUtils;
 import com.xiaoshi.framework.log.core.utils.LogFrameworkUtils;
 import com.xiaoshi.framework.web.core.pojo.AdminHeader;
 import jakarta.servlet.http.HttpServletRequest;
+import org.springframework.http.HttpHeaders;
 
 /**
  * 专属于 admin 包的工具类
@@ -13,7 +14,8 @@ import jakarta.servlet.http.HttpServletRequest;
  */
 public class AdminFrameworkUtils {
 
-    public static final String HEADER_AUTHORIZATION = "authorization";
+    public static final String HEADER_AUTHORIZATION = HttpHeaders.AUTHORIZATION;
+
 
     public static String getTraceId() {
         return getTraceId(WebUtils.getRequest());

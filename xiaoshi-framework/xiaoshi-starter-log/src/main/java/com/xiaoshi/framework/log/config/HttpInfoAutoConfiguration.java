@@ -18,8 +18,8 @@ import org.springframework.web.servlet.DispatcherServlet;
 @AutoConfiguration
 // 引入了 DispatcherServlet 的情况下才生效
 @ConditionalOnClass(DispatcherServlet.class)
-// 配置了 xiaoshi.log.http-info.enable=true 或者无配置的情况下才生效
-@ConditionalOnProperty(prefix = "xiaoshi.log.http-info.enable", value = "true", matchIfMissing = true)
+// 配置了 log.http-info.enable=true 或者无配置的情况下才生效
+@ConditionalOnProperty(prefix = "log.http-info", name = "enable", value = "true", matchIfMissing = true)
 public class HttpInfoAutoConfiguration {
 
     /**

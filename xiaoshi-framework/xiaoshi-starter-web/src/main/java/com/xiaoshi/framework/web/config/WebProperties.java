@@ -10,8 +10,8 @@ import org.springframework.validation.annotation.Validated;
 
 @Data
 @Validated
-@ConfigurationProperties(prefix = "xiaoshi.web")
-public class XiaoshiWebProperties {
+@ConfigurationProperties(prefix = "web")
+public class WebProperties {
 
     @NotNull(message = "客户端接口 API 未配置")
     private Api clientApi = new Api("/api", "com.xiaoshi.client.*.controller.**");

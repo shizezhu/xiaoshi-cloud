@@ -22,11 +22,11 @@ import org.springframework.web.servlet.config.annotation.PathMatchConfigurer;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @AutoConfiguration
-@EnableConfigurationProperties(XiaoshiWebProperties.class)
+@EnableConfigurationProperties(WebProperties.class)
 public class WebAutoConfiguration implements WebMvcConfigurer {
 
     @Resource
-    private XiaoshiWebProperties xiaoshiWebProperties;
+    private WebProperties webProperties;
 
     /**
      * 应用名
@@ -42,12 +42,12 @@ public class WebAutoConfiguration implements WebMvcConfigurer {
     @Override
     public void configurePathMatch(@NonNull PathMatchConfigurer configurer) {
         // 为管理员API配置路径匹配规则
-        configurePathMatch(configurer, xiaoshiWebProperties.getAdminApi());
+        configurePathMatch(configurer, webProperties.getAdminApi());
         // 为客户端API配置路径匹配规则
-        configurePathMatch(configurer, xiaoshiWebProperties.getClientApi());
+        configurePathMatch(configurer, webProperties.getClientApi());
     }
 
-    private void configurePathMatch(PathMatchConfigurer configurer, XiaoshiWebProperties.Api api) {
+    private void configurePathMatch(PathMatchConfigurer configurer, WebProperties.Api api) {
         AntPathMatcher antPathMatcher = new AntPathMatcher(".");
         configurer.addPathPrefix(api.getPrefix() + "/" + applicationName,
                 clazz -> (clazz.isAnnotationPresent(RestController.class) || clazz.isAnnotationPresent(Controller.class))
@@ -59,7 +59,7 @@ public class WebAutoConfiguration implements WebMvcConfigurer {
      */
     @Bean
     public WebPathPrefix webPathPrefix() {
-        return new WebPathPrefix(xiaoshiWebProperties, applicationName);
+        return new WebPathPrefix(webProperties, applicationName);
     }
 
     /**

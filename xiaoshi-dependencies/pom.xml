@@ -20,12 +20,14 @@
         <spring.cloud.version>2023.0.1</spring.cloud.version>
         <spring.cloud.alibaba.version>2023.0.1.0</spring.cloud.alibaba.version>
         <springdoc-openapi.version>2.4.0</springdoc-openapi.version>
+        <knife4j.version>4.5.0</knife4j.version>
 
         <!-- 工具依赖版本 -->
         <google-guava.version>33.3.1-jre</google-guava.version>
         <mapStruct.version>1.6.3</mapStruct.version>
         <fastjson2.version>2.0.53</fastjson2.version>
         <hutool.version>6.0.0-M18</hutool.version>
+
     </properties>
 
     <dependencyManagement>
@@ -87,18 +89,31 @@
                 <artifactId>springdoc-openapi-starter-webmvc-api</artifactId>
                 <version>${springdoc-openapi.version}</version>
             </dependency>
+            <!-- knife4j，OpenAPI 接口文档私有化聚合平台 -->
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-gateway-spring-boot-starter</artifactId>
+                <version>${knife4j.version}</version>
+            </dependency>
+            <!-- knife4j，Spring Cloud Gateway网关聚合文档的中间件 -->
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>
+                <version>${knife4j.version}</version>
+            </dependency>
             <!-- Google Guava，Java 工具类库，功能涵盖集合、字符串、缓存、IO、并发等 -->
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
                 <version>${google-guava.version}</version>
             </dependency>
-            <!-- 对象（DTO）和实体对象之间进行映射 -->
+            <!-- mapstruct，对象（DTO）和实体对象之间进行映射 -->
             <dependency>
                 <groupId>org.mapstruct</groupId>
                 <artifactId>mapstruct</artifactId>
                 <version>${mapStruct.version}</version>
             </dependency>
+            <!-- mapstruct 编译工具 -->
             <dependency>
                 <groupId>org.mapstruct</groupId>
                 <artifactId>mapstruct-processor</artifactId>
